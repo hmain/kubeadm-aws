@@ -19,6 +19,7 @@ Current features:
 
 1. Clone the repo
 2. [Install Terraform](https://www.terraform.io/intro/getting-started/install.html)
+2.1 Install neccessary Terrafrom providers with "terraform init"
 3. Generate token: `python -c 'import random; print "%0x.%0x" % (random.SystemRandom().getrandbits(3*8), random.SystemRandom().getrandbits(8*8))' > token.txt`
 4. Make an SSH key on us-east-1 from the AWS console
 5. Run terraform plan: `terraform plan -var k8s-ssh-key=<aws-ssh-key-name> -var k8stoken=$(cat token.txt) -var admin-cidr-blocks="<my-public-ip-address>/32"`
